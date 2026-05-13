@@ -1,0 +1,9 @@
+Options -Indexes
+
+# Protect data directory
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Block direct access to data/ directory
+  RewriteRule ^data/ - [F,L]
+</IfModule>
